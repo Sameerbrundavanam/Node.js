@@ -5,12 +5,12 @@ GET -> /api/users -> RENDER THE JSON DATA                                       
 GET -> /users/id -> returns the users with the specific id                      DONE
 
 Dynamic Path Paramters
-GET -> /api/users/:id
+GET -> /api/users/:id                                                           DONE
 :id -> Variable | This is Dynamic
 
 
-POST -> /api/users -> creates a new user
+POST -> /api/users -> creates a new user                                        DONE
 
-PATCH -> /api/users/id -> edits the details of the user with the mateched id
+PATCH -> /api/users/id -> edits the details of the user with the mateched id    DONE
 
-DELETE -> /api/users/id -> deletes the user with the respective id
+DELETE -> /api/users/id -> deletes the user with the respective id              DONE
