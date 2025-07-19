@@ -72,7 +72,9 @@ app
 .route("/api/users/:id")
 .get((req,res) => {
     const id = Number(req.params.id);
-    return res.json(users.find(user => user.id === id))
+    const user = users.find(user => user.id === id)
+    if(!user) return res.status(404).json({status: "Record Not Found"})
+    return res.status(200).json({userFound: id})
 })
 
 .patch((req,res) => {
@@ -116,9 +118,12 @@ app
 
 app.post("/api/users",(req,res) => {
     const body = req.body;
+    if(!body || !body.first_name || !body.last_name || !body.gender || !body.emaiail){
+        res.status(400).end("Bro. you are fucked up!!!")
+    }
     users.push({id: users.length+1, ...body})
     fs.writeFile('./MOCK_DATA-2.json',JSON.stringify(users),(err,data) => {
-        return res.json({status : "Success", id: `${users.length}`});
+        return res.status(201).json({status : "Success", id: `${users.length}`});
     })
 })
 

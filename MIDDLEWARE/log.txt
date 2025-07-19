@@ -9,3 +9,15 @@
 1752939325529 : GET through /api/users/ with ip ::1
 1752939458253 : GET through /api/users/ with ip ::1
 1752939470052 : GET through /api/users/ with ip ::1
+1752940873054 : POST through /api/users/ with ip ::1
+1752940984512 : POST through /api/users/ with ip ::1
+1752941091218 : POST through /api/users/ with ip ::1
+1752941246777 : POST through /api/users/ with ip ::1
+1752941258772 : POST through /api/users/ with ip ::1
+1752941513604 : POST through /api/users/ with ip ::1
+1752941515350 : POST through /api/users/ with ip ::1
+1752941614934 : POST through /api/users/ with ip ::1
+1752941875015 : POST through /api/users/sss with ip ::1
+1752942080388 : GET through /api/users/100 with ip ::1
+1752942101997 : GET through /api/users/100 with ip ::1
+1752942105882 : GET through /api/users/1000 with ip ::1
