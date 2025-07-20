@@ -1,0 +1,12 @@
+Log recorded at: 1753007279078 from ip: ::1 by method: GET from path: /api/users 
+Log recorded at: 1753007297809 from ip: ::1 by method: GET from path: /api/users 
+Log recorded at: 1753007301110 from ip: ::1 by method: GET from path: /api/users 
+Log recorded at: 1753007312519 from ip: ::1 by method: GET from path: /api/users 
+Log recorded at: 1753007530917 from ip: ::1 by method: GET from path: /api/users 
+Log recorded at: 1753007638470 from ip: ::1 by method: GET from path: /api/users 
+Log recorded at: 1753007704443 from ip: ::1 by method: POST from path: /api/users 
+Log recorded at: 1753007721706 from ip: ::1 by method: GET from path: /api/users/687cc658434acdfeb058f3fd 
+Log recorded at: 1753007765363 from ip: ::1 by method: PATCH from path: /api/users/687cc658434acdfeb058f3fd 
+Log recorded at: 1753007793134 from ip: ::1 by method: DELETE from path: /api/users/687cc658434acdfeb058f3fd 
+Log recorded at: 1753007804219 from ip: ::1 by method: GET from path: /api/users/687cc658434acdfeb058f3fd 
+Log recorded at: 1753007844547 from ip: ::1 by method: GET from path: /api/users/687cc658434acdfeb058f3fd 
