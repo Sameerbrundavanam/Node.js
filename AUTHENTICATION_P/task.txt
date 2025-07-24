@@ -1,0 +1,29 @@
+                                            PERSONAL NOTES APP
+
+FIRST (WITHOUT AUTH)-
+    FEATURES
+        -> CREATE A NEW NOTE
+        -> VIEW ALL THE NOTES
+        -> VIEW A SINGLE NOTE
+        -> EDIT A SINGLE NOTE
+        -> DELETE A SINGLE NOTE
+
+    ROUTES
+
+        PARENT ROUTE -> /notes
+
+        GET -> 
+            TO GET ALL THE NOTES - /all
+            TO GET A SINGLE NOTE - /:id
+
+        POST ->    
+            TO CREATE A NEW NOTE - /new 
+
+        PATCH ->    
+            TO EDIT A SINGLE NOTE - /edit/:id 
+
+        DELETE ->    
+            TO DELETE A SINGLE NOTE - /delete/:id  
+
+
+SECOND (WITH AUTH FOR EVERY USER)            
