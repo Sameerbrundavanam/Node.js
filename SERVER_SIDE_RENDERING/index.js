@@ -5,7 +5,9 @@ const router = require('./routes/url')
 const path = require('path')
 const url = require('./models/url')
 const staticRouter = require('./routes/staticRouter')
-
+const userRouter = require('./routes/user')
+const cookieParser = require('cookie-parser')
+const {restrictToLoggedInUserOnly, checkAuth} = require('./middleware/auth')
 
 connectToDB('mongodb://127.0.0.1:27017/short-url')
 .then(() => console.log("Mawa Connect Ayyanu"))
@@ -19,9 +21,12 @@ app.set("views", path.resolve('./views'))
 
 app.use(express.json())
 app.use(express.urlencoded({extended : false}))
-app.use("/url",router)
-app.use("/",router)
-app.use("/",staticRouter)
+app.use(cookieParser())
+
+
+app.use("/url",restrictToLoggedInUserOnly,router)
+app.use("/",checkAuth,staticRouter)
+app.use("/user",userRouter)
 
 
 

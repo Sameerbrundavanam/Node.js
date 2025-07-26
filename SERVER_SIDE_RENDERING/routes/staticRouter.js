@@ -4,6 +4,13 @@ const express = require('express')
 const staticRouter = new express.Router();
 const { handleStaticHTML } = require('../controllers/staticRouter')
 
-staticRouter.get("/test",handleStaticHTML)
+staticRouter.get("/",handleStaticHTML)
+staticRouter.get("/signup", async (req,res) => {
+    return res.render("signup")
+})
+
+staticRouter.get("/login", async (req,res) => {
+    return res.render("login")
+})
 
 module.exports = staticRouter;
