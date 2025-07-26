@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new User</title>
+</head>
+<body>
+    <center>
+        <div>
+        <form method="POST" action="/notes/data/new">
+            <label> 
+                Enter the title:
+            </label>
+            <input 
+                type="text"
+                name="title"
+                placeholder="Plan-A"
+            />
+            <br>
+            <br>
+            <label>
+                Enter the description:
+            </label>
+            <br>
+            <br>
+            <textarea
+                name="description"
+                cols="50"
+                rows="20"
+                placeholder="This is the time i'm making it happen !!!"
+            ></textarea>
+            <br>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+    </center>
+</body>
+</html>

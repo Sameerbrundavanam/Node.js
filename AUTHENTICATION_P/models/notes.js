@@ -16,6 +16,10 @@ const notesSchema = mongoose.Schema({
         minlength: 20,
         maxlength: 1000,
     },
+    createdBy:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref : "users",
+    }
 }, {timestamps: true});
 
 

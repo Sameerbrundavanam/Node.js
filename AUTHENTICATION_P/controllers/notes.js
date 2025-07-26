@@ -8,13 +8,15 @@ async function handleCreateNewNote(req,res){
     const result = await notes.create({
         title: body.title,
         description: body.description,
+        createdBy : req.user._id,
     })
     return res.status(201).json({status: "Success", dataCreated : result})
 }
 
 
 async function handleGetAllNotes(req,res){
-    const allNotes = await notes.find({})
+    if(!req.user) return res.redirect("/notes/web/signup");
+    const allNotes = await notes.find({ createdBy : req.user._id})
     if(!allNotes){
         return res.status(404).json({status: "Data Not Found !!!"})
     }

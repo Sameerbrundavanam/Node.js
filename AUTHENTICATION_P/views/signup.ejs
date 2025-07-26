@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signup</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div>
+            <form method="POST" action="/notes/user/signup">
+                <table>
+                            <tr>
+                                <td><label>Full Name</label></td>
+                                <td><input type="text" required name="name"/></td>
+                            </tr>
+                            <tr>
+                                <td><label>Email</label></td>
+                                <td><input type="text" required name="email"/></td>
+                            </tr>
+                            <tr>
+                                <td><label>Password</label></td>
+                                <td><input type="text" required name="password"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center"><button type="submit">Signup</button></td>
+                            </tr>
+                </table>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
