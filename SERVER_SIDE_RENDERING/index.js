@@ -7,7 +7,7 @@ const url = require('./models/url')
 const staticRouter = require('./routes/staticRouter')
 const userRouter = require('./routes/user')
 const cookieParser = require('cookie-parser')
-const {restrictToLoggedInUserOnly, checkAuth} = require('./middleware/auth')
+const {checkForAuthentication, restrictTo} = require('./middleware/auth')
 
 connectToDB('mongodb://127.0.0.1:27017/short-url')
 .then(() => console.log("Mawa Connect Ayyanu"))
@@ -23,9 +23,11 @@ app.use(express.json())
 app.use(express.urlencoded({extended : false}))
 app.use(cookieParser())
 
+//Har baar chalegi hi chalega
+app.use(checkForAuthentication);
 
-app.use("/url",restrictToLoggedInUserOnly,router)
-app.use("/",checkAuth,staticRouter)
+app.use("/url",restrictTo(["NORMAL","ADMIN"]),router)
+app.use("/",staticRouter)
 app.use("/user",userRouter)
 
 

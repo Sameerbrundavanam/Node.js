@@ -2,9 +2,15 @@
 
 const express = require('express')
 const staticRouter = new express.Router();
-const { handleStaticHTML } = require('../controllers/staticRouter')
+const { handleStaticHTML, handleAdmin} = require('../controllers/staticRouter')
+const {restrictTo} = require('../middleware/auth')
 
-staticRouter.get("/",handleStaticHTML)
+
+
+staticRouter.get("/admin/urls",restrictTo(["ADMIN",""]),handleAdmin)
+
+//Calling an Inline Middleware
+staticRouter.get("/",restrictTo(["NORMAL","ADMIN"]),handleStaticHTML)
 staticRouter.get("/signup", async (req,res) => {
     return res.render("signup")
 })
